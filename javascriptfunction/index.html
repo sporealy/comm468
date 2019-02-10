@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Graphic Design Portfolio | Sean O'Leary (Rochester, New York)</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/mediaqueries.css">
+        <link rel="stylesheet" type="text/css" href="jquery.fancybox.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="jquery.fancybox.js"></script>
+        
+        
+        <!--Favicon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134256833-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-134256833-1');
+        </script>
+
+        
+    </head>
+    
+    
+    <body>
+        <header>
+            <img class="logo" src="images/seanpatrickoleary-logo.png" />
+            <h2><span>email:</span> seanpatrickorealy@gmail.com <span class="phone">phone:</span> (585) 755-1337</h2>
+        </header>
+
+        <h1 style="font-weight:100;">graphic design <span style="font-weight:800">portfolio</span></h1>
+
+        <div id="categoryButtons">
+            <ul>
+                <li class="last"><a class="btn active" onclick="filterSelection('all')"> show all</a></li>
+                <li><a class="btn" onclick="filterSelection('professional')"> professional work</a></li>
+                <li class="last"><a class="btn" onclick="filterSelection('school')"> school work</a></li>
+                <li><a class="btn" onclick="filterSelection('print')"> print</a></li>
+                <li><a class="btn" onclick="filterSelection('digital')"> digital</a></li>
+            </ul>
+        </div>
+
+        <div id="results">
+             <p>Showing results for: <b id='searchTerms'>[No Search Entered]</b> </p>
+        </div>
+
+        <form>
+            <input type="text" id="search" onkeyup="searchFunc()" placeholder="Search my portfolio">    
+        </form>
+
+        <div id="gallery">
+            <div class="galleryItem school print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-01-jazzfest.png" data-fancybox="images" data-caption="(School Project) Unofficial 2018 Rochester International Jazz Fest Poster created for Design 1 (COMM219) at St. John Fisher College during the Spring 2018 Semester.">
+                        <img class="imgHover" src="images/spo-graphicdesign-01-jazzfest.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Rochester International Jazz Fest Poster</h2>
+                    <h3>Job Type: <span>Schoolwork</span></h3>
+                    <p>(School Project) Unofficial 2018 Rochester International Jazz Fest Poster created for Design 1 (COMM219) at St. John Fisher College during the Spring 2018 Semester.</p>
+                </div>
+            </div>
+
+            
+            <div class="galleryItem school print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-02-redwings.jpg" data-fancybox="images" data-caption="(School Project) Unofficial pre-season newsletter for the Rochester Red Wings.  Created for Design 1 (COMM219) at St. John Fisher College during the Spring 2018 Semester.">
+                        <img class="imgHover" src="images/spo-graphicdesign-02-redwings.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Rochester Red Wings Preseason Newsletter</h2>
+                    <h3>Job Type: <span>Schoolwork</span></h3>
+                    <p>(School Project) Unofficial pre-season newsletter for the Rochester Red Wings.  Created for Design 1 (COMM219) at St. John Fisher College during the Spring 2018 Semester.</p>
+                </div>
+            </div>
+
+            
+            <div class="galleryItem school print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-03-seedsofsuccess.jpg" data-fancybox="images" data-caption="(The PRIMA Group) Seeds of Success Board Game created for the St. John Fisher Career Center.  This project was completed as part of The PRIMA Group, a student-run advertising agency on St. John Fisher's campus.">
+                        <img class="imgHover" src="images/spo-graphicdesign-03-seedsofsuccess.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Seeds of Success Board Game</h2>
+                    <h3>Job Type: <span>Schoolwork</span></h3>
+                    <p>(<a href="http://sjfcprimagroup.com" target="_blank" title="This project was completed as part of The PRIMA Group, a student-run advertising agency on St. John Fisher's campus.">The PRIMA Group</a>) Seeds of Success Board Game created for the St. John Fisher Career Center.  This project was completed as part of The PRIMA Group, a student-run advertising agency on St. John Fisher's campus.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-04-harrygsmenumadness2015.jpg" data-fancybox="images" data-caption="In March 2015, a contest that I organized and executed for Harry G's in Rochester, NY's South Wedge allowed participants to vote for their favorite sandwiches in a tournament format.  This image depicts the interactive entry page designed for the Harry G's website.">
+                        <img class="imgHover" src="images/spo-graphicdesign-04-harrygsmenumadness2015.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's 2015 Menu Madness Entry Page</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) In March 2015, a contest that I organized and executed for Harry G's in Rochester, NY's South Wedge allowed participants to vote for their favorite sandwiches in a tournament format.  This image depicts the interactive entry page designed for the Harry G's website.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-05-harrygspittsburgheatingcontest2015.jpg" data-fancybox="images" data-caption="In 2015, I helped organize an eating contest event at Harry G's in Rochester, NY's South Wedge.  The event offered prizes for the participants who ate one of Harry G's most popular sandwiches (The Pittsburgh - a massive sandwich) the fastest.  This image depicts a poster advertising the event.  The poster was used online and printed for display in the restaurant.">
+                        <img class="imgHover" src="images/spo-graphicdesign-05-harrygspittsburgheatingcontest2015.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's Pittsburgh Eating Contest Poster</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) Poster for a 2015 sandwich eating contest event.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-06-harrygsfanwich2014.jpg" data-fancybox="images" data-caption="To introduce Harry G's to Rochester while the restaurant was still in its infancy, I organized a contest wherein entrants submitted their idea for a sandwich.  Submissions were voted on by the public and a winner had their sandwich named after them and added to the Harry G's menu.">
+                        <img class="imgHover" src="images/spo-graphicdesign-06-harrygsfanwich2014.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's Fan-wich Contest Poster</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) Poster for a contest offering entrants the chance to have a sandwich named after them.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-07-harrygsfootball2015.png" data-fancybox="images" data-caption="This poster was created for Harry G's New York Style Deli & Cafe to promote their catering service as an option for Football gameday parties.">
+                        <img class="imgHover" src="images/spo-graphicdesign-07-harrygsfootball2015.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's Football Poster</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) Harry G's football season poster - 2015</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-08-harrygs_sandwichpeoplecampaign01-auntjill.png" data-fancybox="images" data-caption="A few years after opening, Harry G's hired me to complete an advertising campaign showcasing some of their most popular offerings.  For this campaign, I was asked to design posters, photograph the food, come up with a slogan, write all of the copy for the posters, and print the posters to be hung around the restaurant and used in various advertising efforts.">
+                        <img class="imgHover" src="images/spo-graphicdesign-08-harrygs_sandwichpeoplecampaign01-auntjill.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>"Sandwiches For Sandwich People" 01</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) "Sandwiches for Sandwich People" print advertising campaign:  The Aunt Jill (vegetarian offering) poster.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-09-harrygs_sandwichpeoplecampaign01-breakfast.png" data-fancybox="images" data-caption="A few years after opening, Harry G's hired me to complete an advertising campaign showcasing some of their most popular offerings.  For this campaign, I was asked to design posters, photograph the food, come up with a slogan, write all of the copy for the posters, and print the posters to be hung around the restaurant and used in various advertising efforts.">
+                        <img class="imgHover" src="images/spo-graphicdesign-09-harrygs_sandwichpeoplecampaign01-breakfast.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>"Sandwiches For Sandwich People" 02</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) "Sandwiches for Sandwich People" print advertising campaign:  The breakfast sandwich poster.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-10-harrygs_sandwichpeoplecampaign01-dessert.png" data-fancybox="images" data-caption="A few years after opening, Harry G's hired me to complete an advertising campaign showcasing some of their most popular offerings.  For this campaign, I was asked to design posters, photograph the food, come up with a slogan, write all of the copy for the posters, and print the posters to be hung around the restaurant and used in various advertising efforts.">
+                        <img class="imgHover" src="images/spo-graphicdesign-10-harrygs_sandwichpeoplecampaign01-dessert.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>"Sandwiches For Sandwich People" 03</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) "Sandwiches for Sandwich People" print advertising campaign:  The dessert poster.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-11-harrygs_sandwichpeoplecampaign01-pittsburgh.png" data-fancybox="images" data-caption="A few years after opening, Harry G's hired me to complete an advertising campaign showcasing some of their most popular offerings.  For this campaign, I was asked to design posters, photograph the food, come up with a slogan, write all of the copy for the posters, and print the posters to be hung around the restaurant and used in various advertising efforts.">
+                        <img class="imgHover" src="images/spo-graphicdesign-11-harrygs_sandwichpeoplecampaign01-pittsburgh.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>"Sandwiches For Sandwich People" 04</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) "Sandwiches for Sandwich People" print advertising campaign:  The Pittsburgh (sandwich) poster.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-12-harrygs_sandwichpeoplecampaign01-salads.png" data-fancybox="images" data-caption="A few years after opening, Harry G's hired me to complete an advertising campaign showcasing some of their most popular offerings.  For this campaign, I was asked to design posters, photograph the food, come up with a slogan, write all of the copy for the posters, and print the posters to be hung around the restaurant and used in various advertising efforts.">
+                        <img class="imgHover" src="images/spo-graphicdesign-12-harrygs_sandwichpeoplecampaign01-salads.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>"Sandwiches For Sandwich People" 05</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) "Sandwiches for Sandwich People" print advertising campaign:  The salads &amp; soups poster.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-13-harrygs_trivia2015.png" data-fancybox="images" data-caption="In our attempts to build a social media following for Harry G's, a weekly trivia question was posted to Harry G's social media sites with the opportunity for a follower to earn a free sandwich by answering the question correctly. This image depict the graphic that I designed to house the trivia questions.">
+                        <img class="imgHover" src="images/spo-graphicdesign-13-harrygs_trivia2015.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's Trivia Challenge</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) Graphic for Harry G's weekly social media trivia challenge.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-14-harrygs_freesandwichcoupon.png" data-fancybox="images" data-caption="Free sandwich coupon designed for Harry G's New York Style Deli & Cafe in Rochester, New York's South Wedge.">
+                        <img class="imgHover" src="images/spo-graphicdesign-14-harrygs_freesandwichcoupon.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's Free Sandwich Coupon</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) Free sandwich coupon design.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-15-harrygs_karaokenightlogo.jpg" data-fancybox="images" data-caption="Karaoke night logo designed for Harry G's New York Style Deli & Cafe in Rochester, New York's South Wedge.">
+                        <img class="imgHover" src="images/spo-graphicdesign-15-harrygs_karaokenightlogo.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's Karaoke Night Logo</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) Logo designed for karaoke night event promotion.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-16-harrygs_superbowl50poster.jpg" data-fancybox="images" data-caption="Super Bowl 50 poster designed for Harry G's New York Style Deli & Cafe in Rochester, New York's South Wedge.">
+                        <img class="imgHover" src="images/spo-graphicdesign-16-harrygs_superbowl50poster.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Harry G's Super Bowl 50 Poster</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://harrygsdeli.com" target="_blank" title="This project was completed for Harry G's New York Style Deli & Cafe in Rochester, NY's South Wedge.">Harry G's New York Style Deli &amp; Cafe</a>) Poster for Super Bowl 50 at Harry G's.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-17-tpsirishpub-websitedesign2018.jpg" data-fancybox="images" data-caption="Homepage design for the 2018 iteration of the Timothy Patrick's Irish Pub website in Rochester, New York.">
+                        <img class="imgHover" src="images/spo-graphicdesign-17-tpsirishpub-websitedesign2018.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>TP's Irish Pub 2018 Website Redesign</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://tpsirishpub.com" target="_blank" title="This project was completed for TP's Irish Pub in Rochester (Penfield), New York.">TP's Irish Pub</a>) Homepage design for the 2018 iteration of the Timothy Patrick's Irish Pub website in Rochester, New York.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-18-wsalon-websitedesign2018.jpg" data-fancybox="images" data-caption="Homepage design for the 2018 iteration of the W Salon website in Rochester, New York">
+                        <img class="imgHover" src="images/spo-graphicdesign-18-wsalon-websitedesign2018.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>W Salon 2018 Website Redesign</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://wsalonrochester.com" target="_blank" title="This project was completed for W Salon in Rochester (Pittsford), New York.">W Salon</a>) Homepage design for the 2018 iteration of the W Salon website in Rochester, New York.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-19-luxlounge-websitedesign2016.jpg" data-fancybox="images" data-caption="Homepage design for the 2016 redesign of the Lux Lounge website in Rochester, New York.">
+                        <img class="imgHover" src="images/spo-graphicdesign-19-luxlounge-websitedesign2016.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Lux Lounge 2016 Website Redesign</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://lux666.com" target="_blank" title="This project was completed for Lux Lounge in Rochester, New York.">Lux Lounge</a>) Homepage design for the 2016 redesign of the Lux Lounge website in Rochester, New York.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem school print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-20-meetthemediaposter2018.jpg" data-fancybox="images" data-caption="An annual event at St. John Fisher College, Meet the Media is hosted by the PRIMA group and allows students the opportunity to interact with local media members via a series of panels and discussions.  This graphic is a poster used to promote the week-long event.">
+                        <img class="imgHover" src="images/spo-graphicdesign-20-meetthemediaposter2018.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Meet the Media 2018 Poster Design</h2>
+                    <h3>Job Type: <span>Schoolwork</span></h3>
+                    <p>(<a href="http://sjfcprimagroup.com" target="_blank" title="This project was completed as part of The PRIMA Group, a student-run advertising agency on St. John Fisher's campus.">The PRIMA Group</a>) Poster design promoting the annual week-long Meet the Media event on St. John Fisher campus..</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem school print">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-21-headshotsposter2018.png" data-fancybox="images" data-caption="Each year, The PRIMA Group hosts an event that offers professional headshot photos to students.  This graphic is the poster used to promote the 2018 Headshots event on St. John Fisher Campus.">
+                        <img class="imgHover" src="images/spo-graphicdesign-21-headshotsposter2018.png" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>Professional Headshots Event 2018 Poster</h2>
+                    <h3>Job Type: <span>Schoolwork</span></h3>
+                    <p>(<a href="http://sjfcprimagroup.com" target="_blank" title="This project was completed as part of The PRIMA Group, a student-run advertising agency on St. John Fisher's campus.">The PRIMA Group</a>) Poster design promoting an annual event where professional headshots are offered to St. John Fisher students.</p>
+                </div>
+            </div>
+            
+            
+            <div class="galleryItem professional digital">
+                <figure class="images">
+                    <a href="images/spo-graphicdesign-22-nysate78thconferencepage.jpg" data-fancybox="images" data-caption="">
+                        <img class="imgHover" src="images/spo-graphicdesign-22-nysate78thconferencepage.jpg" />
+                    </a>
+                </figure>
+
+                <div class="caption">
+                    <h2>NYSATE 78th Conference Web Page Design</h2>
+                    <h3>Job Type: <span>Professional</span></h3>
+                    <p>(<a href="http://nysate.org" target="_blank" title="This project was completed for the New York State Association of Transportation Engineers (NYSATE).">NYSATE</a>) Web page design for the 2018 New York State Transporation Engineers Association (NYSATE) annual conference in Cooperstown, New York.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <img class="footer" src="images/seanpatrickoleary-logo.png" />
+            <h2><span>email:</span> seanpatrickorealy@gmail.com</h2>
+            <h2><span>phone:</span> (585) 755-1337</h2>
+        </footer>
+
+
+        <script>
+        // Disable the Enter Key on Forms (because search results are shown live)
+            $(document).keypress(
+              function(event){
+                if (event.which == '13') {
+                  event.preventDefault();
+                }
+            });
+
+        // Filtering Categories
+            filterSelection("all")
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("galleryItem");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                }
+            }
+
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            var btnContainer = document.getElementById("categoryButtons");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+
+
+
+        // Search & Filter (With "Showing Results for:" text)
+            function searchFunc() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("gallery");
+                li = ul.getElementsByClassName("galleryItem");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByClassName("caption")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+
+                var userInput = document.getElementById('search').value;
+                document.getElementById('searchTerms').innerHTML = userInput;
+            }
+        </script>
+    </body>
+</html>
+
+
