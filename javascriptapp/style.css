@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Open+Sans');
+/*
+font-family: 'Josefin Slab', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+/* Clearing & Resets */
+
+    * {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    article,aside,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section { 
+        display:block;
+    }
+
+    /**, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+    .clearfix:before, .clearfix:after { display: table; content: ''; }
+    .clearfix:after { clear: both; }*/
+
+
+
+
+
+/* Site Wide */
+
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    color:#011627;
+    font-size:1.3em;
+    line-height:1.25em;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    min-width: 250px;
+}
+
+header {
+    
+    
+}
+
+header img {
+    display:block;
+    float:none;
+    margin:1em auto;
+    height:100px;
+    width:auto;
+}
+
+main {
+    
+}
+
+
+footer {
+    
+    
+}
+
+h1 {
+    text-align:center;
+    font-size:2em;
+    line-height:1.25em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+    font-family: 'Josefin Slab', serif;
+    padding:.25em 5em .5em;
+    font-size:1.4em;
+    line-height:1.3em;
+    text-align:center;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+    ul li {
+        cursor: pointer;
+        position: relative;
+        padding:2em;
+        list-style-type: none;
+        background: #FAE7E7;
+        font-size: 18px;
+        transition: 0.2s;
+
+        /* make the list items unselectable */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+        ul li:nth-child(odd) {
+            background: #FCF7F8;
+        }
+
+        ul li:hover {
+            background: #F2B9B9;
+        }
+
+
+/* List Item Spans */
+    .jokespan {
+        display:block;
+        padding:1em 2em;
+        font-size:1em;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align:center;
+    }
+
+    .toldbyspan {
+        text-align:center;
+        display:block;
+        font-family: 'Josefin Slab', serif;
+        font-size:.8em;
+        margin:1em 0 0 0;
+        font-style: italic;
+        color:#1c1c1c;
+    }
+
+    .comicspan {
+        text-align:center;
+        display:block;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size:1.5em;
+        margin:0 auto 2em;
+        color:#D20000;
+    }
+
+
+
+    .remove {
+        display:block;
+        width:25%;
+        margin:0 auto 1em;
+        float:none;
+        padding:.7em 1em;
+        text-align:center;
+        border:.25px solid #000;
+        transition: 0.2s;
+        font-size:.8em;
+    }
+
+        .remove:hover {
+            background-color: #f44336;
+            color: white;
+        }
+
+
+.form {
+    background-color: #D20000;
+    padding:.5em;
+    color: white;
+    text-align: center;
+}
+
+    .form:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    input {
+        margin: .5em auto;
+        border: none;
+        border-radius: 0;
+        width: 50%;
+        float:none;
+        display:block;
+        padding: 10px;
+        font-size: .8em;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+
+        .addBtn {
+            padding:.5em;
+            width:25%;
+            background: #011627;
+            color: #FCF7F8;
+            float: none;
+            margin:.5em auto;
+            display:block;
+            text-align: center;
+            font-size: .75em;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform:lowercase;
+        }
+
+            .addBtn:hover {
+                background-color: #182B3A;
+            }

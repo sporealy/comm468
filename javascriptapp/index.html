@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>COMM468 Javascript Project 02: Favorite Joke List | Sean O'Leary</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="mediaqueries.css">
+    </head>
+    
+    
+    
+    <body>
+        <header>
+            <img src="logo.png" />
+            <h1>My Favorite Jokes List</h1>
+            <p>Use the form below to curate a list of some of your personal favorite jokes and the comedians that told them.</p>
+        </header>
+        
+        <main>
+            <div id="jokeForm" class="form">
+                <input type="text" id="joke" placeholder="Enter the joke here">
+                <input type="text" id="comedian" placeholder="Who told the joke?">
+                <span onclick="newElement()" class="addBtn">Submit</span>
+            </div>
+
+            <ul id="jokeList">
+                <li>
+                    <span class="jokespan">
+                        They got a character on there named Oscar, they treat this guy like shit the entire show. They judge him right in his face, "Oscar you are so mean! Isn't he kids?", "Yeah Oscar! Your a grouch!", its like "BITCH! I LIVE IN A FUCKING TRASHCAN!"
+                    </span>
+                    <span class="toldbyspan">
+                        &nbsp;told by:&nbsp;
+                    </span>
+                    <span class="comicspan">
+                        Dave Chappelle
+                    </span>
+                </li>
+                <li>
+                    <span class="jokespan">
+                        I am so busy doing nothing... that the idea of doing anything - which as you know, always leads to something - cuts into the nothing and then forces me to have to drop everything.
+                    </span>
+                    <span class="toldbyspan">
+                        &nbsp;told by:&nbsp;
+                    </span>
+                    <span class="comicspan">
+                        Jerry Seinfeld
+                    </span>
+                </li>
+                <li>
+                    <span class="jokespan">
+                        You have to stay in shape. My mother started walking five miles a day when she was 60. She’s 97 now and we have no idea where she is.
+                    </span>
+                    <span class="toldbyspan">
+                        &nbsp;told by:&nbsp;
+                    </span>
+                    <span class="comicspan">
+                        George Carlin
+                    </span>
+                </li>
+            </ul>
+        </main>
+        
+        <footer>
+            
+            
+        </footer>
+        
+        <script>
+            // Creating the "Remove" button
+            var myNodelist = document.getElementsByTagName("li");
+            var i;
+            for (i = 0; i < myNodelist.length; i++) {
+                var span = document.createElement("span");
+                var txt = document.createTextNode("Remove");
+                span.className = "remove";
+                span.appendChild(txt);
+                myNodelist[i].appendChild(span);
+            }
+
+            // Make the "Remove" button hide the right list item
+            var remove = document.getElementsByClassName("remove");
+            var i;
+            for (i = 0; i < remove.length; i++) {
+              remove[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+            }
+
+            // Creating a new list item when adding a joke
+            function newElement() {
+                var li = document.createElement("li");
+                var inputValue = document.getElementById("joke").value;
+                var comic = document.getElementById("comedian").value;
+                                
+                var jokespan = document.createElement("span");
+                var a = document.createTextNode(inputValue);
+                jokespan.className = "jokespan";
+                jokespan.appendChild(a);
+                
+                var toldbyspan = document.createElement("span");
+                var b = document.createTextNode(" told by ");
+                toldbyspan.className = "toldbyspan";
+                toldbyspan.appendChild(b);
+                
+                var comicspan = document.createElement("span");
+                var c = document.createTextNode(comic);
+                comicspan.className = "comicspan";
+                comicspan.appendChild(c);
+                              
+                li.append(jokespan, toldbyspan, comicspan);
+              
+                if (inputValue === '') {
+                    alert("You at least have to type a joke.");
+                } else {
+                    document.getElementById("jokeList").appendChild(li);
+                }
+                
+                document.getElementById("joke").value = "";
+                document.getElementById("comedian").value = "";
+
+                var span = document.createElement("span");
+                var txt = document.createTextNode("Remove");
+                span.className = "remove";
+                span.appendChild(txt);
+                li.appendChild(span);
+
+                for (i = 0; i < remove.length; i++) {
+                    remove[i].onclick = function() {
+                        var div = this.parentElement;
+                        div.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
+
